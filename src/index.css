@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Monda', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
