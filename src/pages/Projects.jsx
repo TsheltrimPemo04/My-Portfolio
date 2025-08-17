@@ -16,9 +16,24 @@ const fadeInUp = {
 
 const Projects = () => {
   const projectData = [
-    { title: "Project 1", img: "/project1.jpeg" },
-    { title: "Project 2", img: "/project2.jpeg" },
-    { title: "Project 3", img: "/project2.jpeg" },
+    {
+      title: "NLCS RAG",
+      img: "/project1.jpeg",
+      github: "https://github.com/NoMindDev/agay",
+      demo: "https://drive.google.com/file/d/1Tx5cbMuj9UiEsvz_Q0swo09iKuprr0zo/view?usp=sharing",
+    },
+    {
+      title: "ZeeBar Resort",
+      img: "/project3.jpeg",
+      github: "https://github.com/Ugyen00/ZeebarResort",
+      demo: "https://www.zeebarresort.bt/",
+    },
+    {
+      title: "BATIF",
+      img: "/project2.jpeg",
+      github: "https://github.com/yourusername/project3",
+      demo: "https://batif.vercel.app/",
+    },
   ];
 
   return (
@@ -70,16 +85,33 @@ const Projects = () => {
 
             {/* Buttons */}
             <div className='flex space-x-4'>
-              {["GitHub", "Demo"].map((btn, btnIndex) => (
-                <div
-                  key={btnIndex}
-                  className="p-[1px] rounded-full bg-[conic-gradient(at_center,_#8A6FE8,_#B388EB,_#A176E8,_#7C5FE9,_#8A6FE8)] inline-block hover:shadow-lg transition"
+              <div
+                className="p-[1px] rounded-full bg-[conic-gradient(at_center,_#8A6FE8,_#B388EB,_#A176E8,_#7C5FE9,_#8A6FE8)] inline-block hover:shadow-lg transition"
+              >
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <button className="px-4 sm:px-6 py-2 text-sm sm:text-base bg-white rounded-full hover:bg-transparent hover:text-white transition-all duration-300 w-full h-full">
-                    {btn}
+                  <button className="px-4 sm:px-6 py-2 text-sm sm:text-base bg-white rounded-full hover:bg-transparent hover:text-white transition-all duration-300 w-full h-full cursor-pointer">
+                    GitHub
                   </button>
-                </div>
-              ))}
+                </a>
+              </div>
+
+              <div
+                className="p-[1px] rounded-full bg-[conic-gradient(at_center,_#8A6FE8,_#B388EB,_#A176E8,_#7C5FE9,_#8A6FE8)] inline-block hover:shadow-lg transition"
+              >
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="px-4 sm:px-6 py-2 text-sm sm:text-base bg-white rounded-full hover:bg-transparent hover:text-white transition-all duration-300 w-full h-full cursor-pointer">
+                    Demo
+                  </button>
+                </a>
+              </div>
             </div>
           </motion.div>
         ))}
